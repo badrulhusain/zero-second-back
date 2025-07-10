@@ -12,14 +12,14 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "http://https://zero-second-front.vercel.app/",
+    origin: "https://zero-second-front.vercel.app/",
     methods: ["GET", "POST"],
     credentials: true
   }
 });
 
 app.use(express.json());
-app.use(cors({ origin: 'http://https://zero-second-front.vercel.app/', credentials: true }));
+app.use(cors({ origin: 'https://zero-second-front.vercel.app/', credentials: true }));
 
 // Routes
 app.get('/', (req, res) => res.send('Hello, world!'));
